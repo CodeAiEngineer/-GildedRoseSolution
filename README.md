@@ -1,4 +1,6 @@
 Please check gilded-rose.ts for my additions.
+
+
 additons example:   //MY ADDITION: Quality reduction added for "conjured" materials.
 # Gilded Rose
 
