@@ -1,3 +1,5 @@
+Please check gilded-rose.ts for my additions.
+additons example:   //MY ADDITION: Quality reduction added for "conjured" materials.
 # Gilded Rose
 
 This is the Gilded Rose kata in TypeScript.
