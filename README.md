@@ -1,4 +1,4 @@
-Please check gilded-rose.ts for my additions.
+Please check gilded-rose.ts for my additions and use mocha's test with  npm run test:mocha .
 
 
 additons example:   //MY ADDITION: Quality reduction added for "conjured" materials.
