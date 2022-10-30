@@ -12,10 +12,10 @@ describe('gildedRoseInventoryTest', () => {
     
     for (var i = 0; i < days; i++) {
       const items = gildedRose.updateQuality();
-      //expect(items[0].name).to.equal('fixme');
+
       if (i == 4) {
        expect(items[0].quality).to.equal(0);
-      //expect(items[1].quality).to.equal(0);
+   
       }
     }
 
@@ -27,10 +27,10 @@ describe('gildedRoseInventoryTest', () => {
   
     for (var i = 0; i < days; i++) {
       const items = gildedRose.updateQuality();
-      //expect(items[0].name).to.equal('fixme');
+     
       if (i == 4) {
        expect(items[0].quality).to.greaterThan(-1);
-      //expect(items[1].quality).to.equal(0);
+     
       }
     }
 
@@ -43,10 +43,10 @@ describe('gildedRoseInventoryTest', () => {
   
     for (var i = 0; i < days; i++) {
       const items = gildedRose.updateQuality();
-      //expect(items[0].name).to.equal('fixme');
+      
       if (i == 4) {
        expect(items[0].quality).to.equal(7);
-      //expect(items[1].quality).to.equal(0);
+   
       }
     }
 
@@ -55,7 +55,7 @@ describe('gildedRoseInventoryTest', () => {
   it('The Quality of an item is never more than 50', () => {
     const gildedRose = new GildedRose([new Item('randomitem', 0, 80)]);
     const items = gildedRose.updateQuality();
-    //expect(items[0].name).to.equal('fixme');
+  
     expect(items[0].quality).to.equal(50);
   });
 
@@ -102,7 +102,7 @@ describe('gildedRoseInventoryTest', () => {
    
       if (i == 6) {
        expect(items[0].quality).to.equal(11);
-       //console.log(items[0])
+       
     
       }
     }
@@ -138,7 +138,7 @@ describe('gildedRoseInventoryTest', () => {
    
       if (i == 4) {
        expect(items[0].quality).to.equal(7);
-       //console.log(items[0])
+       
     
       }
     }
@@ -196,7 +196,7 @@ describe('gildedRoseInventoryTest', () => {
   it('Sulfuras" is a legendary item and as such its Quality is 80 and it never alters', () => {
     const gildedRose = new GildedRose([new Item("Sulfuras, Hand of Ragnaros", 12, 55)]);
     const items = gildedRose.updateQuality();
-    //expect(items[0].name).to.equal('fixme');
+    
       
     for (var i = 0; i < days; i++) {
       const items = gildedRose.updateQuality();
