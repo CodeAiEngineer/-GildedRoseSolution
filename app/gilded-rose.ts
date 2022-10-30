@@ -75,8 +75,11 @@ export class GildedRose {
       
       //MY ADDITION: "Sulfuras" quality constraint added.
       if (this.items[i].name.includes('Sulfuras') ==true) {
-        this.items[i].quality=80
-      }    
+        this.items[i].quality= 80}
+      if ((this.items[i].name.includes('Sulfuras') ==false) && (this.items[i].quality > 50)) {
+        this.items[i].quality= 50}  
+
+          
     }
     
 
