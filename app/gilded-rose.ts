@@ -9,7 +9,9 @@ export class Item {
     this.quality = quality;
   }
 }
-
+///MY ADDITION: Define Increase and reduction levels.(I didnt change item class :) )
+var  qReduction = 1;
+var  qIncrease = 1;
 export class GildedRose {
   items: Array<Item>;
 
@@ -18,31 +20,32 @@ export class GildedRose {
   }
 
 
+  
 
   updateQuality() {
     for (let i = 0; i < this.items.length; i++) {      
       if (this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
         if (this.items[i].quality > 0) {
           if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
-            this.items[i].quality = this.items[i].quality - 1
+            this.items[i].quality = this.items[i].quality - qReduction
             //MY ADDITION: Quality reduction added for "conjured" materials.
             if (this.items[i].name.includes('Conjured') ==true) {
-              this.items[i].quality = this.items[i].quality - 1
+              this.items[i].quality = this.items[i].quality - qReduction
             }
           }
         }
       } else {
         if (this.items[i].quality < 50) {
-          this.items[i].quality = this.items[i].quality + 1
+          this.items[i].quality = this.items[i].quality + qIncrease
           if (this.items[i].name == 'Backstage passes to a TAFKAL80ETC concert') {
-            if (this.items[i].sellIn < 11) {
+            if (this.items[i].sellIn <= 10) {
               if (this.items[i].quality < 50) {
-                this.items[i].quality = this.items[i].quality + 1
+                this.items[i].quality = this.items[i].quality + qIncrease
               }
             }
-            if (this.items[i].sellIn < 6) {
+            if (this.items[i].sellIn <= 5) {
               if (this.items[i].quality < 50) {
-                this.items[i].quality = this.items[i].quality + 1
+                this.items[i].quality = this.items[i].quality + qIncrease
               }
             }
           }
@@ -56,10 +59,10 @@ export class GildedRose {
           if (this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
             if (this.items[i].quality > 0) {
               if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
-                this.items[i].quality = this.items[i].quality - 1
+                this.items[i].quality = this.items[i].quality - qReduction
                 //MY ADDITION: Quality reduction added for "conjured" materials.
                 if (this.items[i].name.includes('Conjured') ==true) {
-                  this.items[i].quality = this.items[i].quality - 1
+                  this.items[i].quality = this.items[i].quality - qReduction
                 }
               }
             }
@@ -68,7 +71,7 @@ export class GildedRose {
           }
         } else {
           if (this.items[i].quality < 50) {
-            this.items[i].quality = this.items[i].quality + 1
+            this.items[i].quality = this.items[i].quality + qIncrease
           }
         }
       }

@@ -56,7 +56,7 @@ describe('gildedRoseInventoryTest', () => {
     const gildedRose = new GildedRose([new Item('randomitem', 0, 80)]);
     const items = gildedRose.updateQuality();
   
-    expect(items[0].quality).to.equal(50);
+    expect(items[0].quality).to.lessThan(51);
   });
 
   
@@ -68,7 +68,7 @@ describe('gildedRoseInventoryTest', () => {
       const items = gildedRose.updateQuality();
    
       if (i == 4) {
-       expect(items[0].quality).to.greaterThan(2);
+       expect(items[0].quality).to.greaterThan(1);
     
       }
     }
@@ -179,7 +179,7 @@ describe('gildedRoseInventoryTest', () => {
       const items = gildedRose.updateQuality();
    
       if (i == 13) {
-       expect(items[0].quality).to.equal(50);
+       expect(items[0].quality).to.lessThan(51);
        
     
       }
